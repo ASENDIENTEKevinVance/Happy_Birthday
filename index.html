@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Father</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #333;
+        }
+        header {
+            background: #ff6f61;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.15);
+        }
+        .message {
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+        }
+        footer {
+            background: #ff6f61;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            header {
+                font-size: 20px;
+                padding: 15px;
+            }
+            .message {
+                font-size: 18px;
+                padding: 15px;
+            }
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery img {
+                max-width: 90%;
+            }
+        }
+        .help-link {
+            display: block;
+            margin: 30px auto;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff6f61;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: fit-content;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .help-link:hover {
+            background-color: #ff3b2f;
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+    </style>
+    <script>
+        document.addEventListener("scroll", function() {
+            let images = document.querySelectorAll(".gallery img");
+            images.forEach(img => {
+                let rect = img.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    img.style.transform = "scale(1.1)";
+                    img.style.transition = "transform 1.5s ease-in-out";
+                } else {
+                    img.style.transform = "scale(1)";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>Happy Birthday, Pa! 🎉</header>
+    
+    <div class="gallery">
+        <img src="victor.jpg" alt="Memory 1">
+        <img src="victor2.jpg" alt="Memory 2">
+        <div class="message">
+            <p>Bossing,</p>
+            <p>Salamat sa tanannn. God Bless</p>
+        </div>
+        <img src="victor3.jpg" alt="Memory 3">
+        <img src="victor4.jpg" alt="Memory 4">
+    </div>
+    
+    <footer>Amping diha Bossing! ❤️</footer>
+    <a href="help_kevin.html" class="help-link">How to help Kevin achieve his goals? CLICK ME</a>
+</body>
+</html>
